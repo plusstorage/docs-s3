@@ -1,0 +1,139 @@
+baseURL: 'https://docs.s3.get-cloud.io/'
+enableMissingTranslationPlaceholders: true
+enableRobotsTXT: true
+enableGitInfo: true
+taxonomies:
+  tag: tags
+  category: categories
+params:
+  taxonomy:
+    taxonomyCloud:
+      - tags
+      - categories
+    taxonomyCloudTitle:
+      - Tag Cloud
+      - Categories
+    taxonomyPageHeader:
+      - tags
+      - categories
+    pygmentsCodeFences: true
+    pygmentsUseClasses: false
+    pygmentsUseClassic: false
+    pygmentsStyle: tango
+  copyright: plusserver GmbH
+  privacy_policy: 'https://www.plusserver.com/en/privacy-policy/'
+  github_repo: 'https://github.com/plusstorage/docs-s3'
+  github_branch: main
+  algolia_docsearch: false
+  offlineSearch: true
+  prism_syntax_highlighting: true
+  ui:
+    breadcrumb_disable: false
+    footer_about_disable: true
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: true
+    sidebar_menu_foldable: true
+    sidebar_search_disable: false
+    feedback:
+      enable: false
+      'yes': >-
+        Glad to hear it! Please <a
+        href="https://github.com/plusstorage/docs-s3/issues/new">tell us how we can
+        improve</a>.
+      'no': >-
+        Sorry to hear that. Please <a
+        href="https://github.com/plusstorage/docs-s3/issues/new">tell us how
+        we can improve</a>.
+    readingtime:
+      enable: true
+  links:
+    user:
+      - name: plusstorage S3
+        url: 'https://www.plusserver.com/en/product/s3-storage/'
+        icon: fa-solid fa-house
+        desc: plusserver S3 product page
+      - name: GitHub
+        url: 'https://github.com/plusstorage'
+        icon: fab fa-github
+        desc: Development takes place here!
+    developer:
+      - name: Contact
+        url: 'https://www.plusserver.com/en/support/#contact'
+        icon: fa-solid fa-phone
+        desc: plusserver GmbH contact information
+      - name: Company Information
+        url: 'https://www.plusserver.com/en/about-us/'
+        icon: fa-solid fa-gavel
+        desc: plusserver GmbH imprint
+theme:
+  - github.com/google/docsy
+  - github.com/google/docsy/dependencies
+permalinks:
+  blog: '/:section/:year/:month/:day/:slug/'
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: Smart
+  exif:
+    disableDate: false
+    disableLatLong: true
+    excludeFields: ''
+    includeFields: ''
+services: {}
+
+defaultContentLanguage: en
+
+languages:
+  en:
+    title: "plusstorage S3"
+    languageName: English
+    languageCode: en
+    contentDir: content/en
+    params:
+      description: technical documentation for plusstorage
+      time_format_default: "02.01.2006"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: friendly
+    guessSyntax: 'true'
+outputs:
+  section:
+    - HTML
+    - RSS
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: false
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    enableDNT: false
+    simple: false
+  youtube:
+    disable: false
+    privacyEnhanced: false
+module:
+  proxy: direct
+  hugoVersion:
+    extended: true
+    min: 0.112.3
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+    - path: github.com/google/docsy/dependencies
+      disable: false
